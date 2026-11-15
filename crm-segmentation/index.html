@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRM and segmentation at scale · Jackie Kirpalani</title>
+<meta name="description" content="Case study: owning segmentation for a B2B training business with 14+ portfolios, 500+ products a year and a database of approximately 2 million contacts.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Two million contacts. One segment architecture.">
+<meta property="og:description" content="Owning segmentation for a whole B2B training business, and the repeat buyer model built on top of it.">
+<meta property="og:url" content="https://jackiekirpalani.github.io/crm-segmentation/">
+<meta property="og:image" content="https://jackiekirpalani.github.io/images/og-segmentation.jpg">
+<link rel="canonical" href="https://jackiekirpalani.github.io/crm-segmentation/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<a class="brand" href="/">Jackie Kirpalani</a>
+<nav aria-label="Site">
+<a href="/">01 Energy</a>
+<a href="/crm-segmentation/" aria-current="page">02 Segmentation</a>
+<a href="/whx-exhibitor-nurture/">03 Nurture</a>
+<a href="/about/">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap">
+<div class="kicker">Case study 02 · Informa Connect Middle East · Marketing Analyst, 2023 to 2025</div>
+<h1>Two million contacts. One segment architecture.</h1>
+<p class="lede">For just over two years I owned segmentation for an entire B2B training business. Every campaign team came to one place for its audience, and I built the structure that made that workable.</p>
+<div class="stats">
+<div class="stat"><b>14+</b><span>professional training portfolios</span></div>
+<div class="stat"><b>500+</b><span>products a year</span></div>
+<div class="stat"><b>~2M</b><span>contacts in the database</span></div>
+<div class="stat"><b>+22%</b><span>overall email engagement</span></div>
+</div>
+</div>
+</section>
+
+<section id="role" style="padding-top:48px;padding-bottom:48px">
+<div class="wrap">
+<div class="role">
+<span class="label">My role</span>
+<div>
+<p class="a">My title was Marketing Analyst. The job was wider than the title: I was responsible for all the segmentation the business did.</p>
+<p class="b">I built and maintained the segment and interest code architecture behind CRM and lifecycle marketing, working in Adestra and the CRM, and with the BI team on reporting dashboards. It was the Excel work I had built at Informa that led to the role.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="architecture">
+<div class="wrap">
+<div class="head"><span class="kicker">The architecture</span><h2 class="h2">Four layers, one source of truth</h2><p class="sub">CRM work lives inside databases you cannot screenshot, so this is a simplified view of how the pieces fitted together. Select a layer.</p></div>
+<div class="layers" role="group" aria-label="Architecture layers">
+<button type="button" class="layer" data-k="codes" aria-pressed="true"><span class="n">Layer 01</span><b>Interest codes</b></button>
+<button type="button" class="layer" data-k="segments" aria-pressed="false"><span class="n">Layer 02</span><b>Segments</b></button>
+<button type="button" class="layer" data-k="campaigns" aria-pressed="false"><span class="n">Layer 03</span><b>Campaigns and journeys</b></button>
+<button type="button" class="layer" data-k="outputs" aria-pressed="false"><span class="n">Layer 04</span><b>Sales and reporting</b></button>
+</div>
+<div class="card detail" id="layerDetail" aria-live="polite">
+<h3 id="layerTitle">Interest codes</h3>
+<div id="layerBody"><p>An interest code architecture across 500+ annual products, which I maintained myself as the catalogue changed.</p><p>It is the foundation everything else stands on, including the repeat buyer model below.</p></div>
+</div>
+</div>
+</section>
+
+<section id="model">
+<div class="wrap">
+<div class="head"><span class="kicker">The repeat buyer model</span><h2 class="h2" style="max-width:900px">Who keeps coming back, at three levels and three time windows</h2><p class="sub">I engineered a multi-dimensional repeat buyer report that mapped 2, 3 and 5-year purchase histories at company, sector and portfolio level. It became the primary tool for identifying high-value recurring buyers and directing retention campaigns. Below is a working mock of how it read.</p></div>
+<div class="controls">
+<div><span class="label">Time window</span><div class="card seg" role="group" aria-label="Time window" id="segWin">
+<button type="button" data-w="2" aria-pressed="false">2 years</button>
+<button type="button" data-w="3" aria-pressed="true">3 years</button>
+<button type="button" data-w="5" aria-pressed="false">5 years</button>
+</div></div>
+<div><span class="label">Level</span><div class="card seg" role="group" aria-label="Level" id="segLvl">
+<button type="button" data-l="company" aria-pressed="true">Company</button>
+<button type="button" data-l="sector" aria-pressed="false">Sector</button>
+<button type="button" data-l="portfolio" aria-pressed="false">Portfolio</button>
+</div></div>
+</div>
+<div class="card mock">
+<div class="mock-top"><span id="mockTitle">Repeat buyers · company level · last 3 years</span><span class="flag">Sample data, invented for this page</span></div>
+<div class="tblwrap"><table class="rb" id="rbTable"><thead></thead><tbody></tbody></table></div>
+</div>
+<p class="note" style="margin:16px 0 0">No Informa data is shown. Company names, sectors, portfolios, figures and the key account rule are placeholders that mirror the shape of the report, not its contents.</p>
+
+<div class="two" style="margin-top:40px">
+<div class="card panel"><span class="n">What it drove · 01</span><h3>Key accounts, treated like key accounts</h3><p>Accounts the model identified as key received WhatsApp campaigns and personalised emails.</p></div>
+<div class="card panel"><span class="n">What it drove · 02</span><h3>Learning tailored to the company</h3><p>Where a company met the minimum attendee threshold, the course learning was tailored for them.</p></div>
+</div>
+</div>
+</section>
+
+<section id="rules">
+<div class="wrap">
+<div class="head"><span class="kicker">Frequency rules</span><h2 class="h2" style="max-width:900px">Protecting the most senior audience from our own calendar</h2><p class="sub">With 500+ products a year and three to four emails behind each, frequency needed one owner. Because I controlled every team's target audience, I centralised it for the most senior contacts.</p></div>
+<div class="rules">
+<div class="card rule"><b>2</b><strong>emails a day, at most</strong><span>A hard cap for the C-suite audience, across every team's campaigns.</span></div>
+<div class="card rule"><b>6 hrs</b><strong>minimum gap between sends</strong><span>If two emails did go out on the same day, they were never close together.</span></div>
+<div class="card rule"><b>1</b><strong>test for relevance</strong><span>"If I were C-suite, would I do this?" Courses too junior for that audience were never marketed to them.</span></div>
+</div>
+</div>
+</section>
+
+<section id="hygiene">
+<div class="wrap">
+<div class="head"><span class="kicker">Hygiene and engagement</span><h2 class="h2">Prioritised segments, measurably better engagement</h2></div>
+<div class="engine">
+<div class="card col"><span class="label">Built on</span><span class="chip">Engagement behaviour</span><span class="chip">Purchase history</span></div>
+<div class="arrow"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7FD1C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+<div class="card col"><span class="label">Into</span><span class="chip on">Prioritised audience segments</span><span class="chip on">Data integrity across Adestra and the CRM</span></div>
+<div class="arrow"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7FD1C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></div>
+<div class="out"><span class="label">Outcome</span><p>Overall email engagement increased.</p><b>+22%</b></div>
+</div>
+</div>
+</section>
+
+<section id="speed">
+<div class="wrap">
+<div class="head"><span class="kicker">Where the skill went next · WHX Dubai, Informa Markets, 2025</span><h2 class="h2" style="max-width:900px">A 45-minute segmentation build, cut to 10</h2><p class="sub">Knowing how the data was structured paid off in my next role. On WHX Dubai I cut a recurring audience segmentation build from 45 minutes to 10 by restructuring how the query addressed the underlying data architecture.</p></div>
+<div class="card ba" role="img" aria-label="Segmentation build time cut from 45 minutes to 10 minutes">
+<div class="row was"><span class="label">Before</span><div class="track"><i></i></div><span class="v">45 min</span></div>
+<div class="row now"><span class="label">After</span><div class="track"><i></i></div><span class="v">10 min</span></div>
+</div>
+<p style="margin:20px 0 0"><a class="mono" style="font-size:13px;text-decoration:none" href="/whx-exhibitor-nurture/">See the WHX Dubai case study →</a></p>
+</div>
+</section>
+
+<section id="twice">
+<div class="wrap">
+<div class="head"><span class="kicker">I have built this twice</span><h2 class="h2" style="max-width:900px">Same instinct, a decade apart</h2><p class="sub">Both times I built a coding architecture so a system could attribute value at a granular level and replace manual work.</p></div>
+<div class="twice">
+<div class="card col"><span class="label">Finance · Al Shirawi Group · 2011 to 2014</span><h3>A cost-allocation architecture</h3><p>An account mapping structure that made spend traceable from the system down to showroom, department and individual employee level, replacing manual reconstruction from paper invoices.</p><span class="res">Invoice processing errors reduced by 80%</span></div>
+<div class="card col"><span class="label">Marketing · Informa Connect · 2023 to 2025</span><h3>A segment and interest code architecture</h3><p>The structure behind CRM and lifecycle marketing for 14+ portfolios, 500+ products a year and approximately 2 million contacts, and the repeat buyer model that ran on it.</p><span class="res">The primary tool for identifying high-value recurring buyers</span></div>
+</div>
+</div>
+</section>
+
+<section id="more" style="padding-top:24px">
+<div class="wrap">
+<div class="head"><span class="kicker">More work</span><h2 class="h2">Keep reading</h2></div>
+<div class="more-grid">
+<a class="card work" href="/"><span class="n">Case study 01 · Middle East Energy 2023</span><b>24,000 visitors. The target was 20,000.</b><span class="d">A three-person visitor and delegate team, and the 40+ partner programme I sourced and negotiated.</span><span class="go">Read the case study →</span></a>
+<a class="card work" href="/whx-exhibitor-nurture/"><span class="n">Case study 03 · WHX Dubai</span><b>Fifteen emails. Nobody received all of them.</b><span class="d">An exhibitor nurture where a lead score, not a calendar, decided who got which email.</span><span class="go">Read the case study →</span></a>
+<a class="card work" href="/about/"><span class="n">About</span><b>Finance, operations, then marketing.</b><span class="d">13+ years of experience, one habit throughout: building the system behind the work.</span><span class="go">Read my background →</span></a>
+</div>
+</div>
+</section>
+</main>
+
+<footer id="contact">
+<div class="wrap">
+<div class="foot">
+<div class="next"><span class="label" style="font-size:13px">Contact</span><b>Let's talk.</b><p>I am based in Dubai and available immediately.</p></div>
+<div class="ctas-main"><a class="pill solid" href="https://www.linkedin.com/in/jackiekirpalani/">Connect on LinkedIn</a><a class="pill ghost" href="mailto:jackie.kirpalani@gmail.com">Email me</a></div>
+</div>
+<div class="footline"><span>Jackie Kirpalani · Dubai</span><a href="/Jackie_Kirpalani_Portfolio.pdf">Download this portfolio as a PDF</a></div>
+</div>
+</footer>
+
+<script>
+(function(){
+  /* architecture layers */
+  var L={
+    codes:['Interest codes',['An interest code architecture across 500+ annual products, which I maintained myself as the catalogue changed.','It is the foundation everything else stands on, including the repeat buyer model below.']],
+    segments:['Segments',['Audience segments built on engagement behaviour, purchase history and industry vertical.','Every team\'s target audience came through me.']],
+    campaigns:['Campaigns and journeys',['Targeted CRM campaigns through Adestra: email, WhatsApp, promotional newsletters and automated nurture flows.','Automated retention journeys ran across the 500+ product portfolio.']],
+    outputs:['Sales and reporting',['Scored calling lists gave the telesales team a prioritised order of who to ring.','I partnered with the BI team on the performance dashboards.']]
+  };
+  var lt=document.getElementById('layerTitle'),lb=document.getElementById('layerBody'),btns=document.querySelectorAll('.layer');
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    var d=L[b.getAttribute('data-k')];lt.textContent=d[0];lb.innerHTML=d[1].map(function(p){return '<p>'+esc(p)+'</p>'}).join('');
+  })});
+
+  /* repeat buyer mock: invented sample data, oldest year first */
+  var P=['Project management','HR','Finance','Leadership'];
+  var C=[
+    ['Company A','Energy',     [[3,0,0,1],[4,0,1,1],[5,1,0,2],[6,0,1,2],[7,1,1,2]]],
+    ['Company B','Banking',    [[0,0,2,0],[0,1,3,0],[0,0,4,1],[0,1,4,1],[0,1,5,1]]],
+    ['Company C','Government', [[2,2,0,0],[0,0,0,0],[3,2,0,1],[2,3,0,1],[3,3,0,2]]],
+    ['Company D','Healthcare', [[0,1,0,0],[0,2,0,0],[0,0,0,0],[0,3,0,1],[0,2,0,1]]],
+    ['Company E','Construction',[[4,0,0,0],[3,0,0,0],[0,0,0,0],[0,0,0,0],[5,0,1,0]]],
+    ['Company F','Energy',     [[0,0,0,0],[0,0,0,0],[2,0,0,0],[3,0,0,1],[3,1,0,1]]],
+    ['Company G','Banking',    [[0,0,1,0],[0,0,0,0],[0,0,0,0],[0,0,2,0],[0,0,0,0]]],
+    ['Company H','Government', [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,2,0,0],[1,2,0,0]]],
+    ['Company I','Healthcare', [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,3]]],
+    ['Company J','Construction',[[1,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]]
+  ];
+  var win=3,lvl='company';
+  var th=document.querySelector('#rbTable thead'),tb=document.querySelector('#rbTable tbody'),mt=document.getElementById('mockTitle');
+  function sum(a){return a.reduce(function(x,y){return x+y},0);}
+  function rows(){
+    return C.map(function(c){
+      var yrs=c[2].slice(5-win),act=yrs.map(function(y){return sum(y)>0}),n=act.filter(Boolean).length,tot=sum(yrs.map(sum));
+      var byP=P.map(function(_,i){return sum(yrs.map(function(y){return y[i]}))});
+      return {name:c[0],sector:c[1],act:act,n:n,tot:tot,byP:byP,rep:n>=2,key:n===win&&tot>=win*3};
+    });
+  }
+  function dots(a){return '<span class="yrs" aria-hidden="true">'+a.map(function(o){return '<i'+(o?' class="on"':'')+'></i>'}).join('')+'</span>';}
+  function draw(){
+    var r=rows(),h,b;
+    mt.textContent='Repeat buyers · '+lvl+' level · last '+win+' years';
+    if(lvl==='company'){
+      r=r.filter(function(x){return x.tot>0}).sort(function(a,b){return b.tot-a.tot});
+      h=['Company','Sector','Years active','Purchases','Status'];
+      b=r.map(function(x){
+        var tag=x.key?'<span class="tag key">Key account</span>':x.rep?'<span class="tag rep">Repeat buyer</span>':'<span class="tag">One-off</span>';
+        return '<tr><td>'+x.name+'</td><td>'+x.sector+'</td><td>'+dots(x.act)+' <span class="muted" style="margin-left:8px">'+x.n+' of '+win+'</span></td><td class="num">'+x.tot+'</td><td>'+tag+'</td></tr>';
+      });
+    }else{
+      var keys=lvl==='sector'?['Energy','Banking','Government','Healthcare','Construction']:P;
+      var agg=keys.map(function(k,i){
+        var buyers=0,rep=0,tot=0;
+        r.forEach(function(x){
+          var v=lvl==='sector'?(x.sector===k?x.tot:0):x.byP[i];
+          if(v>0){buyers++;tot+=v;if(x.rep)rep++;}
+        });
+        return {k:k,buyers:buyers,rep:rep,tot:tot};
+      }).sort(function(a,b){return b.tot-a.tot});
+      var max=Math.max.apply(null,agg.map(function(a){return a.tot}))||1;
+      h=[lvl==='sector'?'Sector':'Portfolio','Buying companies','Of which repeat','Purchases','Share'];
+      b=agg.map(function(a){return '<tr><td>'+a.k+'</td><td class="num">'+a.buyers+'</td><td class="num">'+a.rep+'</td><td class="num">'+a.tot+'</td><td><div class="sharebar"><i style="width:'+Math.round(a.tot/max*100)+'%"></i></div></td></tr>'});
+    }
+    th.innerHTML='<tr>'+h.map(function(x,i){return '<th'+((x==='Purchases'||x==='Buying companies'||x==='Of which repeat')?' class="num"':'')+'>'+x+'</th>'}).join('')+'</tr>';
+    tb.innerHTML=b.join('');
+  }
+  function bind(id,attr,fn){var bs=document.querySelectorAll('#'+id+' button');bs.forEach(function(x){x.addEventListener('click',function(){bs.forEach(function(y){y.setAttribute('aria-pressed',y===x)});fn(x.getAttribute(attr));draw();})});}
+  bind('segWin','data-w',function(v){win=+v});
+  bind('segLvl','data-l',function(v){lvl=v});
+  draw();
+})();
+</script>
+</body>
+</html>
