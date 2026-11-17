@@ -302,3 +302,9 @@ a.chip{text-decoration:none;color:var(--soft)}a.chip:hover{border-color:var(--ac
 .pill.wa svg{color:var(--accent);flex:none}
 .pill.wa:hover{border-color:var(--accent)}
 @media (max-width:480px){.foot .ctas-main{grid-template-columns:1fr;width:100%}}
+
+.intro{padding:28px 32px;display:flex;flex-direction:column;gap:14px;max-width:1000px}
+.intro p{margin:0;font-size:19px;line-height:1.55;color:var(--soft)}
+.intro .jump{display:flex;flex-wrap:wrap;gap:8px 20px}
+.intro .jump a{font-family:'IBM Plex Mono',monospace;font-size:13px;text-decoration:none;color:var(--accent)}
+@media (max-width:640px){.intro{padding:22px}.intro p{font-size:17px}}
